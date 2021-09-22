@@ -6,21 +6,21 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80/http"
+      - "6002:80"
 
   orders:
     image: rdiazconcha/ecommerceapiorders:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80/http"
+      - "6003:80"
     
   products:
     image: rdiazconcha/ecommerceapiproducts:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80/http"
+      - "6001:80"
 
   search:
     image: rdiazconcha/ecommerceapisearch:latest
