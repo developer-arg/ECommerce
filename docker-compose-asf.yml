@@ -2,28 +2,28 @@ version: '3.4'
 
 services:
   customers:
-    image: mancu37/ecommerceapicustomers:latest
+    image: rdiazconcha/ecommerceapicustomers:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80/http"
 
   orders:
-    image: mancu37/ecommerceapiorders:latest
+    image: rdiazconcha/ecommerceapiorders:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80/http"
     
   products:
-    image: mancu37/ecommerceapiproducts:latest
+    image: rdiazconcha/ecommerceapiproducts:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80/http"
 
   search:
-    image: mancu37/ecommerceapisearch:latest
+    image: rdiazconcha/ecommerceapisearch:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - Services__Products=http://10.0.0.4:19081/lil/products
